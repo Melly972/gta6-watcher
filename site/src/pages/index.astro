@@ -297,7 +297,7 @@ function formatDate(iso) {
     <p>Site indépendant non affilié à Rockstar Games ou Take-Two Interactive.<br />
     Chaque résumé est généré automatiquement et reformulé à partir de sources publiques, systématiquement créditées et liées.</p>
   </footer>
-  <script define:vars={{}}>
+  <script is:inline define:vars={{}}>
     window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
     window.LOCALE = 'fr';
     window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Les informations fournies sont invalides. Merci de vérifier le format et de réessayer.";
@@ -316,6 +316,6 @@ function formatDate(iso) {
     };
     var AUTOHIDE = Boolean(0);
   </script>
-  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+  <script is:inline defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
