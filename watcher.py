@@ -15,6 +15,7 @@ Variables d'environnement requises (voir .env.example) :
     REDDIT_USER_AGENT
 """
 
+import time
 import os
 import re
 import json
@@ -59,6 +60,11 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 # https://ai.google.dev/gemini-api/docs/pricing (colonne "Free Tier")
 # avant de lancer, et ajuste GEMINI_MODEL dans ton .env si besoin.
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+
+# Délai (en secondes) entre deux appels à l'API pour rester sous la limite
+# du tier gratuit (généralement 10-15 requêtes/minute selon le modèle).
+# 5 secondes = max 12 requêtes/minute, marge de sécurité incluse.
+GEMINI_DELAY_SECONDS = float(os.environ.get("GEMINI_DELAY_SECONDS", "5"))
 
 SUMMARY_PROMPT = """Tu es un rédacteur d'actualités jeux vidéo. Voici un article source sur GTA 6.
 
@@ -198,37 +204,56 @@ def collect_reddit():
 
 def summarize(title: str, content: str) -> str:
     if not GEMINI_API_KEY:
-        # Fallback sans IA si pas de clé configurée : renvoie le contenu tronqué
+        print("[Résumé] ATTENTION : GEMINI_API_KEY est vide — utilisation du texte brut tronqué, pas de résumé IA.")
         return content[:280] + ("..." if len(content) > 280 else "")
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
 
-    try:
-        response = requests.post(
-            url,
-            params={"key": GEMINI_API_KEY},
-            headers={"content-type": "application/json"},
-            json={
-                "contents": [
-                    {
-                        "parts": [
-                            {"text": SUMMARY_PROMPT.format(title=title, content=content[:2000])}
-                        ]
-                    }
-                ],
-                "generationConfig": {
-                    "maxOutputTokens": 300,
-                    "temperature": 0.3,
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = requests.post(
+                url,
+                params={"key": GEMINI_API_KEY},
+                headers={"content-type": "application/json"},
+                json={
+                    "contents": [
+                        {
+                            "parts": [
+                                {"text": SUMMARY_PROMPT.format(title=title, content=content[:2000])}
+                            ]
+                        }
+                    ],
+                    "generationConfig": {
+                        "maxOutputTokens": 300,
+                        "temperature": 0.3,
+                    },
                 },
-            },
-            timeout=30,
-        )
-        response.raise_for_status()
-        data = response.json()
-        return data["candidates"][0]["content"]["parts"][0]["text"].strip()
-    except Exception as e:
-        print(f"[Résumé] Erreur API: {e}")
-        return content[:280] + ("..." if len(content) > 280 else "")
+                timeout=30,
+            )
+
+            if response.status_code == 429:
+                wait = GEMINI_DELAY_SECONDS * (attempt + 2)  # backoff progressif
+                print(f"[Résumé] 429 reçu, nouvelle tentative dans {wait:.0f}s (essai {attempt + 1}/{max_retries})")
+                time.sleep(wait)
+                continue
+
+            response.raise_for_status()
+            data = response.json()
+
+            if "candidates" not in data or not data["candidates"]:
+                print(f"[Résumé] Réponse Gemini sans candidat exploitable: {data}")
+                return content[:280] + ("..." if len(content) > 280 else "")
+
+            return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+
+        except Exception as e:
+            print(f"[Résumé] Erreur API (essai {attempt + 1}/{max_retries}): {e}")
+            time.sleep(GEMINI_DELAY_SECONDS)
+
+    # Tous les essais ont échoué : fallback
+    print(f"[Résumé] Échec après {max_retries} tentatives, utilisation du texte brut.")
+    return content[:280] + ("..." if len(content) > 280 else "")
 
 
 # ---------------------------------------------------------------------------
@@ -281,6 +306,9 @@ def main():
             "date": datetime.datetime.utcnow().isoformat(),
         })
         mark_seen(conn, item["url"], item["title"], item["source"])
+
+        if GEMINI_API_KEY:
+            time.sleep(GEMINI_DELAY_SECONDS)  # respecte la limite du tier gratuit
 
     save_results(new_results)
     conn.close()
