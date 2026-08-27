@@ -59,6 +59,32 @@ function formatDate(iso) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GTA 6 News — Actualités et résumés quotidiens</title>
   <meta name="description" content="Toute l'actualité de Grand Theft Auto 6 résumée automatiquement : leaks, annonces officielles, dates de sortie et plus." />
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <style is:global>
+    @font-face {
+      font-display: block;
+      font-family: Roboto;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+    }
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 600;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+    }
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 700;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+    }
+    :where(.sib-form-message-panel) { display: none; }
+    :where(.sib-form-message-panel .sib-notification__icon) { width: 20px; height: 20px; }
+    #sib-container input:-ms-input-placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container input::placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container textarea::placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container a { text-decoration: underline; color: #2BB2FC; }
+  </style>
   <style>
     :root {
       --bg: #0d0d0f;
@@ -180,6 +206,62 @@ function formatDate(iso) {
     <p>Résumés automatiques de l'actualité Grand Theft Auto 6 — annonces officielles, leaks, dates de sortie. Sources citées et liées pour chaque article.</p>
   </header>
 
+  <!-- Begin Brevo Form -->
+  <div class="sib-form" style="text-align: center; background-color: #17171b;">
+    <div id="sib-form-container" class="sib-form-container">
+      <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px; max-width:540px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
+        </div>
+      </div>
+      <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#085229; background-color:#e7faf0; border-color:#13ce66; border-radius:3px; max-width:540px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Your subscription has been successful.</span>
+        </div>
+      </div>
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; margin: 0 auto; text-align:center; background-color:#1e1e23; border-width:1px; border-style:solid; border-color:#2a2a30; border-radius:10px; direction:ltr">
+        <form id="sib-form" method="POST" action="https://eae5f4da.sibforms.com/serve/MUIFAIbJ8qpbvGkOdRClbUTbZeooZSCD9NvHsm2DigkARaVHOEyp3ZUog7YBGNcm0ITlURkvSdXzw9HQvFSsjQcwMrJRg2VfyKiH0B9rSEqlpZVBfep4ZU6qidKk8X50_s8JXh-9mmToqqGzS5pAzvI5FNlZ7vp00ATTHkYB7Fv19BUOWyWvbUNUMrYHaN33PTZct8jUfCr476-tTQ==" data-type="subscription">
+          <div style="padding: 8px 0;">
+            <div class="sib-form-block" style="font-family:Helvetica, sans-serif; font-size:22px; font-weight:700; text-align:left; color:#e8e8ea; background-color:transparent; text-align:left">
+              <p>Recevez l'actu GTA 6 par email</p>
+            </div>
+          </div>
+          <div style="padding: 8px 0;">
+            <div class="sib-form-block" style="font-family:Helvetica, sans-serif; font-size:14px; text-align:left; color:#9a9aa2; background-color:transparent; text-align:left">
+              <div class="sib-text-form-block">
+                <p>Un récap quotidien des news GTA 6, directement dans ta boîte mail.</p>
+              </div>
+            </div>
+          </div>
+          <div style="padding: 8px 0;">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row ">
+                  <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:14px; font-weight:700; text-align:left; color:#c8c8cd;" for="EMAIL" data-required="*">Ton adresse email</label>
+                  <div class="entry__field">
+                    <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="EMAIL" data-required="true" required />
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+              </div>
+            </div>
+          </div>
+          <div style="padding: 8px 0;">
+            <div class="sib-form-block" style="text-align: left">
+              <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#0d0d0f; background-color:#ff6b35; border-width:0px; border-radius:6px; padding: 10px 20px;" form="sib-form" type="submit">
+                S'ABONNER
+              </button>
+            </div>
+          </div>
+          <input type="text" name="email_address_check" value="" class="input--hidden">
+          <input type="hidden" name="locale" value="fr">
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- End Brevo Form -->
+
+
   <main>
     <div class="meta-bar">
       <span>{displayedArticles.length} article{displayedArticles.length > 1 ? "s" : ""}</span>
@@ -215,5 +297,25 @@ function formatDate(iso) {
     <p>Site indépendant non affilié à Rockstar Games ou Take-Two Interactive.<br />
     Chaque résumé est généré automatiquement et reformulé à partir de sources publiques, systématiquement créditées et liées.</p>
   </footer>
+  <script define:vars={{}}>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+    window.LOCALE = 'fr';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Les informations fournies sont invalides. Merci de vérifier le format et de réessayer.";
+    window.REQUIRED_ERROR_MESSAGE = "Ce champ ne peut pas être laissé vide.";
+    window.GENERIC_INVALID_MESSAGE = "Les informations fournies sont invalides. Merci de vérifier le format et de réessayer.";
+    window.INVALID_NUMBER = "Les informations fournies sont invalides. Merci de vérifier le format et de réessayer.";
+    window.INVALID_DATE = "Merci d'entrer une date valide";
+    window.REQUIRED_MULTISELECT_MESSAGE = 'Merci de sélectionner au moins une option';
+    window.translation = {
+      common: {
+        selectedList: '{quantity} liste sélectionnée',
+        selectedLists: '{quantity} listes sélectionnées',
+        selectedOption: '{quantity} sélectionné(s)',
+        selectedOptions: '{quantity} sélectionné(s)',
+      }
+    };
+    var AUTOHIDE = Boolean(0);
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>

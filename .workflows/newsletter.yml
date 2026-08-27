@@ -1,0 +1,31 @@
+name: GTA 6 Newsletter
+
+on:
+  schedule:
+    # Une fois par jour à 18h00 UTC (20h00 en France l'été, 19h00 l'hiver)
+    - cron: "0 18 * * *"
+  workflow_dispatch: {}  # permet de le lancer manuellement pour tester
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Envoyer la newsletter du jour
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          BREVO_SENDER_EMAIL: ${{ secrets.BREVO_SENDER_EMAIL }}
+          BREVO_SENDER_NAME: ${{ secrets.BREVO_SENDER_NAME }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: python send_newsletter.py
