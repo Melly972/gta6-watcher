@@ -1,65 +1,16 @@
 [
   {
-    "source": "IGN",
-    "title": "Save 40% Off Sony's Premium DualSense Edge Controller, Worth It for Grand Theft Auto 6",
-    "summary": "La manette haut de gamme DualSense Edge de Sony bénéficie actuellement d'une réduction de 40 %. Cet accessoire personnalisable, doté de gâchettes ajustables et de boutons arrière, est mis en avant comme une option pertinente pour préparer l'arrivée de Grand Theft Auto 6.",
-    "url": "https://www.ign.com/articles/playstation-5-dualsense-edge-wireless-controller-deal-august-2026",
-    "date": "2026-08-29T01:58:31.114429"
-  },
-  {
-    "source": "IGN",
-    "title": "Kick Streamer Neon Responds After Rockstar Seemingly Includes a Reference to Him in GTA 6 Netflix Showcase",
-    "summary": "Le créateur de contenu Neon a réagi suite à la découverte d'une potentielle référence à sa personne dans la bande-annonce de GTA 6 diffusée sur Netflix. Un personnage aperçu lors d'une mission secondaire semble en effet inspiré par l'apparence et le style du streamer. Rockstar Games n'a toutefois pas confirmé officiellement l'intégration de cette figure de la plateforme Kick dans le jeu.",
-    "url": "https://www.ign.com/articles/kick-streamer-neon-responds-after-rockstar-seemingly-includes-a-reference-to-him-in-gta-6-netflix-showcase",
-    "date": "2026-08-29T01:58:49.864584"
-  },
-  {
-    "source": "IGN",
-    "title": "Rockstar Approached Netflix for Exclusive GTA 6 Extended Look, Not the Other Way Around",
-    "summary": "Contrairement aux rumeurs suggérant une initiative de la plateforme de streaming, c'est Rockstar Games qui a sollicité Netflix pour diffuser la bande-annonce étendue de GTA 6. Le studio a pris l'initiative de ce partenariat afin d'assurer la visibilité de ces nouvelles images. Cette collaboration confirme ainsi la stratégie de communication directe choisie par l'éditeur pour son futur titre.",
-    "url": "https://www.ign.com/articles/rockstar-approached-netflix-for-exclusive-gta-6-extended-look-not-the-other-way-around",
-    "date": "2026-08-29T01:59:12.164417"
-  },
-  {
-    "source": "IGN",
-    "title": "12 Game, Movie, and TV Show Trailers You Might Have Missed This Week",
-    "summary": "L'actualité vidéoludique de la semaine a été marquée par la diffusion d'une séquence étendue consacrée à Grand Theft Auto 6. Cette présentation s'inscrit dans un ensemble de nouveautés incluant également des extraits de titres dévoilés lors de la Gamescom. Ces annonces complètent un programme riche en contenus audiovisuels, dont une série Pokémon en stop-motion et un prochain film Ali G.",
-    "url": "https://www.ign.com/articles/this-week-in-game-movie-tv-show-trailers-aug-22-aug-28",
-    "date": "2026-08-29T01:59:18.823493"
-  },
-  {
-    "source": "IGN",
-    "title": "Save 42% Off the PS Portal, the Only Way You'll Be Able to Play Grand Theft Auto 6 on a Handheld",
-    "summary": "Rockstar Games a confirmé que le lancement initial de Grand Theft Auto 6 sera exclusivement réservé aux consoles PlayStation 5 et Xbox. Par conséquent, le titre ne sera pas disponible sur les plateformes portables lors de sa sortie. Cette précision contredit les spéculations sur une éventuelle accessibilité immédiate du jeu sur des appareils mobiles.",
-    "url": "https://www.ign.com/articles/ps-portal-deal-august-2026",
-    "date": "2026-08-29T02:00:33.418158"
-  },
-  {
-    "source": "GameSpot",
-    "title": "Tech Experts Call Grand Theft Auto 6 The Most Visually Advanced Game To Date, Which Explains Why It’s Stuck At 30FPS",
-    "summary": "Les experts de Digital Foundry qualifient Grand Theft Auto 6 de titre le plus abouti visuellement à ce jour, soulignant la qualité exceptionnelle du rendu des personnages et de l'éclairage. L'analyse technique confirme que le jeu maintient une cadence stable de 30 images par seconde en résolution 1440p upscalée. Selon ces spécialistes, il est peu probable que Rockstar propose un mode 60 FPS sur la génération actuelle de consoles, afin de préserver la fidélité graphique du titre.",
-    "url": "https://www.gamespot.com/articles/tech-experts-call-grand-theft-auto-6-the-most-visually-advanced-game-to-date-which-explains-why-its-stuck-at-30fps/",
-    "date": "2026-08-29T02:00:39.866512"
-  },
-  {
-    "source": "GameSpot",
-    "title": "Fable Dev Happy About Delay To 2027 To Avoid “Chaotic Window,” And We All Know That Means GTA 6",
-    "summary": "Le directeur du prochain *Fable*, Ralph Fulton, a justifié le report du titre à février 2027 par la volonté d'éviter une période de sorties trop encombrée. Bien qu'il n'ait pas explicitement nommé le jeu de Rockstar lors de son dernier entretien, cette décision stratégique vise à ne pas entrer en concurrence directe avec le lancement de *GTA 6*. Ce décalage doit permettre au studio de bénéficier d'une meilleure visibilité médiatique pour la sortie du jeu.",
-    "url": "https://www.gamespot.com/articles/fable-dev-happy-about-delay-to-2027-to-avoid-chaotic-window-and-we-all-know-that-means-gta-6/",
-    "date": "2026-08-29T02:00:47.137946"
-  },
-  {
-    "source": "GameSpot",
-    "title": "GTA 6 Looks Like It Features This Popular TV Show Apartment",
-    "summary": "Des observateurs ont identifié dans les bandes-annonces de GTA 6 le bâtiment utilisé pour représenter l'appartement de Dexter Morgan dans la série télévisée éponyme. Cette découverte alimente les spéculations des joueurs sur la présence possible de clins d'œil ou de parodies liées au personnage au sein de Vice City. Rockstar Games reste toutefois prudent sur l'intégration de références culturelles pour éviter que le titre ne paraisse obsolète à sa sortie, prévue pour le 19 novembre prochain.",
-    "url": "https://www.gamespot.com/articles/gta-6-looks-like-it-features-this-popular-tv-show-apartment/",
-    "date": "2026-08-29T02:00:53.695360"
+    "source": "Eurogamer",
+    "title": "Squadron 42 delayed to 2027, with Star Citizen dev blaming GTA 6",
+    "summary": "Le studio Cloud Imperium Games a repoussé la sortie de son titre Squadron 42 au deuxième trimestre 2027. Son dirigeant, Chris Roberts, justifie ce report par la volonté d'éviter une concurrence directe avec le lancement de GTA 6. Cette décision stratégique vise à garantir une meilleure visibilité commerciale au projet.",
+    "url": "https://www.eurogamer.net/squadron-42-delayed-2027-gta-6",
+    "date": "2026-08-29T14:07:49.259237"
   },
   {
     "source": "PCGamer",
-    "title": "Bland or badass? The internet is split on GTA 6's Jason, and so is PC Gamer",
-    "summary": "L'apparence et la personnalité de Jason, l'un des protagonistes de GTA 6, suscitent un vif débat au sein de la communauté des joueurs et de la presse spécialisée. Les avis divergent quant à savoir si le personnage affiche un caractère suffisamment marquant ou s'il manque de relief. Cette controverse souligne l'attente importante entourant le développement du prochain titre de Rockstar Games.",
-    "url": "https://www.pcgamer.com/games/grand-theft-auto/bland-or-badass-the-internet-is-split-on-gta-6s-jason-and-so-is-pc-gamer/",
-    "date": "2026-08-29T02:01:05.857344"
+    "title": "Rockstar considered having four protagonists in Grand Theft Auto 6, but the studio 'worried about diluting the amount of player time' with each character",
+    "summary": "Rockstar Games a envisagé d'intégrer quatre protagonistes dans le prochain Grand Theft Auto au lieu de deux. Le studio a finalement abandonné cette idée par crainte de réduire le temps de développement narratif accordé à chaque personnage. Cette réflexion interne montre la volonté des développeurs de préserver la profondeur de l'expérience de jeu.",
+    "url": "https://www.pcgamer.com/games/grand-theft-auto/rockstar-considered-having-four-protagonists-in-grand-theft-auto-6-but-the-studio-worried-about-diluting-the-amount-of-player-time-with-each-character/",
+    "date": "2026-08-29T14:07:55.233968"
   }
 ]
